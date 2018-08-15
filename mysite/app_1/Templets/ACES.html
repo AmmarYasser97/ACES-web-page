@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,21 +8,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="ACES.css"> 
+        <script src="{% static 'js/popper.min.js' %}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/ACES.css' %}"> 
     </head>
     
     <body>
         <div class="container-fluid">
             <image class="logo">
-                <img class="img-fluid" src="download.jpg">
+                <img class="img-fluid" src="{% static '/download.jpg' %}">
             </image>
                         
             <video class="embed-responsive embed-responsive-16by9" controls>
-                <source src="video.mp4" type="video/mp4">
+                <source src="{% static '/video.mp4' %}" type="video/mp4">
             </video>
             
             <div class="row aces">
@@ -61,10 +63,10 @@
 
             <footer class="footer over-hidden">       
                  <ul>
-                        <li><img src="002-facebook.png" alt="facebook"/></li>
-                        <li><img src="004-youtube.png" alt="youtube"/></li>   
-                        <li><img src="003-google-plus.png" alt="googleplus"/></li>
-                        <li><img src="001-twitter.png" alt="twiter"/></li>
+                        <li><img src="{% static '/002-facebook.png' %}" alt="facebook"/></li>
+                        <li><img src="{% static '/004-youtube.png' %}" alt="youtube"/></li>   
+                        <li><img src="{% static '/003-google-plus.png' %}" alt="googleplus"/></li>
+                        <li><img src="{% static '/001-twitter.png' %}" alt="twiter"/></li>
                 </ul>
             </footer>
         </div>
